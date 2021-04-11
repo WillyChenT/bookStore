@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dev.ming.bookStore.mapper.BookRecordMapper">
+
+    <insert id="save" parameterType="BookRecord">
+
+        insert into book_record (user_id, book_id, current_num, episode_id, create_time)
+        values( #{userId, jdbcType=INTEGER},
+                #{bookId, jdbcType=INTEGER},
+                #{currentNum, jdbcType=INTEGER},
+                #{episodeId, jdbcType=INTEGER},
+                #{createTime, jdbcType=TIMESTAMP})
+    </insert>
+
+
+</mapper>
